@@ -1,3 +1,30 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.image-container {
+  position: relative; /* Essencial para o pseudoelemento */
+}
+
+.image-container::before {
+  content: ""; /* Essencial para que o pseudoelemento seja renderizado */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor da máscara */
+  z-index: 1; /* Acima da imagem */
+}
+
+.image-container > img {
+  position: relative; /* Para garantir que a imagem fique abaixo da máscara, se necessário */
+  z-index: 0;
+}
+
+.image-banner {
+ @media screen and (min-width: 1024px) {
+    height: 100vh; /* Altura total da viewport em telas grandes */
+  
+ };
+}

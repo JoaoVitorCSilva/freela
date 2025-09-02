@@ -1,9 +1,18 @@
 import React from 'react';
 
 export default function HeaderIntDark() {
+  const backgroundImageUrl = "/img/bg-full.png"; // Substitua pelo caminho da sua imagem
+
   return (
-    <div className="min-h-screen"> {/* Adicionei min-h-screen para garantir que a seção ocupe a altura da tela */}
-      <header className="w-dvw absolute top-0 left-1/2 -translate-x-1/2 z-[1000] py-4">
+    <div className="min-h-screen image-container"
+    style={{ 
+        backgroundImage: `url("${backgroundImageUrl}") `,
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center',}}
+    > {/* Adicionei min-h-screen para garantir que a seção ocupe a altura da tela */}
+  
+      <header className="w-dvw top-0 left-1/2 -translate-x-1/2 z-[1000] py-4">
+       
         <div className="max-w-[120rem] text-gray-50 px-6 md:px-8 lg:px-10">
           <nav className="w-full flex flex-row items-center font-sans">
             <a className="text-gray-50" href="/">
@@ -16,7 +25,7 @@ export default function HeaderIntDark() {
                 <circle cx="369" cy="246" r="50" fill="currentColor"></circle>
               </svg>
             </a>
-            <div className="flex-1 relative hidden md:flex items-center justify-center">
+            {/* <div className="flex-1 relative hidden md:flex items-center justify-center">
               <ul className="mx-auto inline-flex gap-6 text-sm font-light">
                 <li><a className="font-bold relative after:h-px after:content-[''] after:w-full after:absolute after:top-full after:bg-accent-500 after:left-0 after:translate-y-1" href="">Accueil</a></li>
                 <li><a href="">Quem somos?</a></li>
@@ -25,25 +34,23 @@ export default function HeaderIntDark() {
               </ul>
               <ul className="absolute right-0">
                 <li className="relative"><a className=" h-10 rounded-lg flex items-center justify-center text-base bg-accent-500 leading-none px-12 uppercase" href="">Contato</a></li>
+                
               </ul>
-            </div>
+            </div> */}
           </nav>
         </div>
       </header>
       <section className="h-dvh w-dvw max-h-[50rem] relative">
-        <div className="absolute inset-0 z-[1]">
-          <img className="h-full w-full object-cover object-center absolute inset-0 z-0" src="/img/bg-full.png" alt="Background Image" />
-          <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-        </div>
+       
         <div className="max-w-[120rem] mx-auto h-full relative z-[2] px-6 md:px-8 lg:px-10">
           <div className="h-full w-full flex flex-col relative space-y-6">
-            <div className="mt-auto mb-0 text-gray-50 md:pb-36 space-y-6">
-              <span className="font-light text-sm text-accent-500 ">Bem vindo ao Freela</span>
+            <div className="mt-auto mb-0 text-gray-50 md:pb-80 space-y-6 ">
+              {/* <span className="font-light text-sm text-accent-500 ">Bem vindo ao Freela</span> */}
               <h1 className="text-3xl md:text-5xl max-w-[30rem] font-medium">O profissional que você precisa</h1>
               <p className="max-w-[30rem] font-light ml-4 before:content-[''] relative before:absolute before:w-px before:h-full before:left-0 before:top-0 before:-translate-x-4 before:bg-accent-500 md:text-base text-sm"> Estamos muito felizes em ter você por aqui. Seja você um(a) empreendedor(a) em busca do talento ideal ou um profissional procurando novas oportunidades, chegou ao lugar certo.</p>
               <div className="md:flex-row flex-col flex gap-4">
-                <button className="inline-block text-base font-medium px-12 py-2 bg-accent-400 rounded-lg cursor-pointer">En savoir plus</button>
-                <button className="inline-block text-base font-medium px-12 py-2 border border-accent-400 rounded-lg text-accent-400 cursor-pointer bg-gray-50/10 backdrop-blur-3xl">Nos Horaires</button>
+                {/* <button className="inline-block text-base font-medium px-12 py-2 bg-accent-400 rounded-lg cursor-pointer">En savoir plus</button>
+                <button className="inline-block text-base font-medium px-12 py-2 border border-accent-400 rounded-lg text-accent-400 cursor-pointer bg-gray-50/10 backdrop-blur-3xl">Nos Horaires</button> */}
               </div>
             </div>
             <div className="md:absolute md:right-0 md:bottom-32 text-gray-50 my-16">

@@ -21,7 +21,10 @@ Route::get('/dashboard', function () {
 
 // Esta rota vai renderizar o componente React
 Route::get('/Vagas', function () {
-    return Inertia::render('Vagas');
+    return Inertia::render('Vagas/index');
+});
+Route::get('/Teste', function () {
+    return Inertia::render('Teste/index');
 });
 
 
