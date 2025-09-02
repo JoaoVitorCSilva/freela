@@ -15,6 +15,10 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            backgroundImage: {
+                'minha-imagem': "url('/img/')",
+                'padrao-textura': "url('/img/')",
+            },
         },
     },
 

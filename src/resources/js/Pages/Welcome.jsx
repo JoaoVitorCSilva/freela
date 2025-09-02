@@ -16,13 +16,14 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
     };
 
     return (
-        <>
+        <main>
             <Head title="Welcome" />
-            <div className="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
+            <div className="bg-gray-900 text-black/50 dark:bg-black dark:text-white/50 mb-auto">
                 
                 <div >
-                    <div className=''>
-                        <Banner />
+                    <div className='image-banner'>
+                    
+                       <Banner />
                     </div>
                     <footer className="py-16 text-center text-sm text-black dark:text-white/70">
                         Ambiente desenvolvido por Ericles Alves e João Vitor Candido
@@ -33,6 +34,6 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                     </footer>
                 </div>
             </div>
-        </>
+        </main>
     );
 }
