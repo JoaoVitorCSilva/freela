@@ -12,9 +12,11 @@ services:
         dockerfile: Dockerfile
     ports:
       - "8000:8000"
-      - "5173:5173"
+      
     volumes:
         - ./src:/var/www/html:delegated
+    environment:
+      - HMR_HOST=192.168.0.111
     depends_on:
       - db
       - mailhog
@@ -56,12 +58,16 @@ services:
       ports:
           - "3000:3000"
           - "3001:3001"
+          - "5173:5173"
           
       working_dir: /var/www/html
-      entrypoint: [ 'npm' ]
+      # environment:
+      # - HMR_HOST=192.168.0.111
+      entrypoint: [ 'npm', 'run', 'dev' ]
 
   mailhog:
       image: mailhog/mailhog:latest
       ports:
           - "1025:1025"
           - "8025:8025"
+

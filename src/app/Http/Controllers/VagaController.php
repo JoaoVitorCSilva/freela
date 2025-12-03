@@ -24,14 +24,23 @@ class VagaController extends Controller
     {
         // Validação dos dados do formulário
         $validatedData = $request->validate([
+            // 'id_empresa' deve ser obrigatório e existir na tabela 'empresas', coluna 'id'
             'id_empresa' => 'required|exists:empresas,id',
+            // 'titulo_vaga' é obrigatório, deve ser texto e ter no máximo 255 caracteres
             'titulo_vaga' => 'required|string|max:255',
+            // 'descricao_vaga' é obrigatório e deve ser texto
             'descricao_vaga' => 'required|string',
+            // 'valor_freelancer' é obrigatório e deve ser numérico
             'valor_freelancer' => 'required|numeric',
+            // 'periodo_pagamento' é obrigatório e deve ser um dos valores permitidos
             'periodo_pagamento' => 'required|in:por_hora,por_dia,por_projeto',
+            // 'endereco' é obrigatório, deve ser texto e ter no máximo 255 caracteres
             'endereco' => 'required|string|max:255',
+            // 'horario_trabalho' é obrigatório, deve ser texto e ter no máximo 255 caracteres
             'horario_trabalho' => 'required|string|max:255',
+            // 'beneficios' é opcional (nullable) e deve ser texto se fornecido
             'beneficios' => 'nullable|string',
+            // 'status' é obrigatório e deve ser um dos valores permitidos
             'status' => 'required|in:ativa,pausada,concluida',
         ]);
 
@@ -49,14 +58,23 @@ class VagaController extends Controller
     {
         // Validação dos dados do formulário
         $validatedData = $request->validate([
+            // 'id_empresa' deve ser obrigatório e existir na tabela 'empresas', coluna 'id'
             'id_empresa' => 'required|exists:empresas,id',
+            // 'titulo_vaga' é obrigatório, deve ser texto e ter no máximo 255 caracteres
             'titulo_vaga' => 'required|string|max:255',
+            // 'descricao_vaga' é obrigatório e deve ser texto
             'descricao_vaga' => 'required|string',
+            // 'valor_freelancer' é obrigatório e deve ser numérico
             'valor_freelancer' => 'required|numeric',
+            // 'periodo_pagamento' é obrigatório e deve ser um dos valores permitidos
             'periodo_pagamento' => 'required|in:por_hora,por_dia,por_projeto',
+            // 'endereco' é obrigatório, deve ser texto e ter no máximo 255 caracteres
             'endereco' => 'required|string|max:255',
+            // 'horario_trabalho' é obrigatório, deve ser texto e ter no máximo 255 caracteres
             'horario_trabalho' => 'required|string|max:255',
+            // 'beneficios' é opcional (nullable) e deve ser texto se fornecido
             'beneficios' => 'nullable|string',
+            // 'status' é obrigatório e deve ser um dos valores permitidos
             'status' => 'required|in:ativa,pausada,concluida',
         ]);
 

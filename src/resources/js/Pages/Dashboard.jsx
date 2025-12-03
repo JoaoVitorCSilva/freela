@@ -11,7 +11,7 @@ export default function index() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('/api/vagas')
+    fetch('/vagas')
       .then(response => {
         if (!response.ok) {
           throw new Error('Erro na rede ou no servidor');
