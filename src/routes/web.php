@@ -39,6 +39,9 @@ Route::get('/vagas', [VagaController::class, 'index'])->name('vagas.index');
 Route::get('/vagas/create', [VagaController::class, 'create'])->name('vagas.create');
 Route::post('/vagas', [VagaController::class, 'store'])->name('vagas.store');
 
+// Rotas da API
+Route::get('/api/vagas', [VagaController::class, 'index']);
+
 // Rotas protegidas (middleware auth)
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
